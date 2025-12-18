@@ -1,0 +1,163 @@
+[
+  {
+    "src": "https://hoktastream1.webcamera.pl/krakow_cam_66c146/krakow_cam_66c146.stream/chunks.m3u8",
+    "title": "Panorama",
+    "description": "Wide panoramic view of the historic city center",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.061947, "lng": 19.937511 }
+  },
+  {
+    "src": "https://hoktastream1.webcamera.pl/krakow_cam_9a3b91/krakow_cam_9a3b91.stream/chunks.m3u8",
+    "title": "Rynek Główny 1",
+    "description": "Main Market Square with Cloth Hall and St. Mary's Basilica",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.061783, "lng": 19.937089 }
+  },
+  {
+    "src": "https://hoktastream1.webcamera.pl/krakow_cam_da9ab3/krakow_cam_da9ab3.stream/chunks.m3u8",
+    "title": "Rynek Główny 2",
+    "description": "Another angle of the bustling Main Market Square",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.061639, "lng": 19.937325 }
+  },
+  {
+    "src": "https://hoktastream2.webcamera.pl/krakow_cam_702b61/krakow_cam_702b61.stream/chunks.m3u8",
+    "title": "Rynek Główny 3",
+    "description": "View of the historic market square from the south side",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.061486, "lng": 19.937142 }
+  },
+  {
+    "src": "https://hoktastream1.webcamera.pl/wentzl_cam_be5c6c/wentzl_cam_be5c6c.stream/chunks.m3u8",
+    "title": "Rynek Główny 4",
+    "description": "Street-level view of the Main Market Square",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.061894, "lng": 19.937658 }
+  },
+  {
+    "src": "https://hoktastream2.webcamera.pl/krakow_cam_4c3e37/krakow_cam_4c3e37.stream/chunks.m3u8",
+    "title": "Wawel 1",
+    "description": "Royal Wawel Castle overlooking the Vistula River",
+    "category": "Wawel",
+    "quality": "HD",
+    "location": { "lat": 50.054414, "lng": 19.935611 }
+  },
+  {
+    "src": "https://hoktastream2.webcamera.pl/krakow_cam_c78671/krakow_cam_c78671.stream/chunks.m3u8",
+    "title": "Wawel 2",
+    "description": "Another perspective of the majestic Wawel complex",
+    "category": "Wawel",
+    "quality": "HD",
+    "location": { "lat": 50.053889, "lng": 19.934583 }
+  },
+  {
+    "src": "https://hoktastream3.webcamera.pl/krakow_cam_6f3258/krakow_cam_6f3258.stream/chunks.m3u8",
+    "title": "Plac Wszystkich Świętych",
+    "description": "All Saints Square near the historic city center",
+    "category": "Old Town",
+    "quality": "SD",
+    "location": { "lat": 50.061392, "lng": 19.935278 }
+  },
+  {
+    "src": "https://hoktastream1.webcamera.pl/krakow_cam_c44608/krakow_cam_c44608.stream/chunks.m3u8",
+    "title": "Rynek Podgórski",
+    "description": "Podgórze Market Square in the historic Jewish district",
+    "category": "Districts",
+    "quality": "SD",
+    "location": { "lat": 50.046556, "lng": 19.946722 }
+  },
+  {
+    "src": "https://hoktastream4.webcamera.pl/krakow_cam_904168/krakow_cam_904168.stream/chunks.m3u8",
+    "title": "ul. Floriańska",
+    "description": "Historic Floriańska Street leading to the Main Square",
+    "category": "Old Town",
+    "quality": "HD",
+    "location": { "lat": 50.064394, "lng": 19.938944 },
+    "isVertical": true
+  },
+  {
+    "src": "https://hoktastream4.webcamera.pl/krakow_cam_c4feaa/krakow_cam_c4feaa.stream/chunks.m3u8",
+    "title": "Nowa Huta",
+    "description": "Socialist-era planned district with wide boulevards",
+    "category": "Districts",
+    "quality": "SD",
+    "location": { "lat": 50.071667, "lng": 20.033111 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_alroznowahuta.m3u8",
+    "title": "Aleja Róż (Nowa Huta)",
+    "description": "Rose Avenue in Nowa Huta district",
+    "category": "Districts",
+    "quality": "HD",
+    "location": { "lat": 50.074444, "lng": 20.036667 }
+  },
+  {
+    "src": "https://hoktastream3.webcamera.pl/krakowkladka_cam_a51738/krakowkladka_cam_a51738.stream/chunks.m3u8",
+    "title": "Most Józefa Piłsudskiego",
+    "description": "Piłsudski Bridge crossing the Vistula River",
+    "category": "Bridges",
+    "quality": "HD",
+    "location": { "lat": 50.053889, "lng": 19.945278 }
+  },
+  {
+    "src": "https://cdn-14-go.toya.net.pl/kamery/krak_kladkaojcabernatka.m3u8",
+    "title": "Kładka o. Bernatka",
+    "description": "Father Bernatek Bridge connecting Kazimierz and Podgórze",
+    "category": "Bridges",
+    "quality": "HD",
+    "location": { "lat": 50.052778, "lng": 19.948889 }
+  },
+  {
+    "src": "https://hoktastream2.webcamera.pl/krakow_cam_680fe3/krakow_cam_680fe3.stream/chunks.m3u8",
+    "title": "Zakrzówek",
+    "description": "Beautiful azure lagoon and recreation area",
+    "category": "Nature",
+    "quality": "HD",
+    "location": { "lat": 50.036944, "lng": 19.921944 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_lematauronarena.m3u8",
+    "title": "TAURON Arena",
+    "description": "Modern sports and entertainment venue",
+    "category": "Modern",
+    "quality": "HD",
+    "location": { "lat": 50.068611, "lng": 19.992778 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_galkrakowskadworzec.m3u8",
+    "title": "Galeria Krakowska",
+    "description": "Shopping center next to the main train station",
+    "category": "Modern",
+    "quality": "HD",
+    "location": { "lat": 50.068333, "lng": 19.947222 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_rondogrunwaldzkie.m3u8",
+    "title": "Rondo Grunwaldzkie",
+    "description": "Major traffic roundabout near the historic center",
+    "category": "Traffic",
+    "quality": "HD",
+    "location": { "lat": 50.056111, "lng": 19.921667 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_herbertalagiewnicka.m3u8",
+    "title": "Trasa Łagiewnicka",
+    "description": "Łagiewnicka bypass highway",
+    "category": "Traffic",
+    "quality": "HD",
+    "location": { "lat": 50.014444, "lng": 19.934444 }
+  },
+  {
+    "src": "https://cdn-13-go.toya.net.pl/kamery/krak_kapelanka.m3u8",
+    "title": "ul. Kapelanka",
+    "description": "Kapelanka Street main thoroughfare",
+    "category": "Traffic",
+    "quality": "HD",
+    "location": { "lat": 50.037222, "lng": 19.929722 }
+  }
+]

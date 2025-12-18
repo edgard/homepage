@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live webcams streaming from landmarks across Kraków.">
+    <meta name="theme-color" content="#05070d">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css?v=875">
+    <title>Kraków Live Webcams</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.12/dist/hls.min.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>Kraków Live</h1>
+                <div class="weather-widget" id="weatherWidget">
+                    <div class="weather-loading">Loading...</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <select id="layoutSelect" class="header-select" title="Grid layout">
+                    <option value="default">Default</option>
+                    <option value="compact">Compact</option>
+                    <option value="large">Large</option>
+                </select>
+                <button class="btn-icon" type="button" id="themeToggleBtn" title="Toggle theme">🌙</button>
+                <button class="btn-icon" type="button" id="installBtn" style="display: none;" title="Install app">📲</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <noscript>Your browser must have JavaScript enabled to play the streams.</noscript>
+        
+        <div class="category-filters" id="categoryFilters"></div>
+
+        <section class="grid-container" id="videoGrid" aria-live="polite"></section>
+        <div class="no-results" id="noResults" style="display: none;">
+            <p>No streams found</p>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <footer class="page-footer">
+        <p>This webpage and its contents are intended solely for the private use of the individual authorized to access this site.</p>
+    </footer>
+
+    <script src="script.js?v=875" defer></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+version: '3'
+
+vars:
+  PORT: '{{.PORT | default "8000"}}'
+  PID_FILE: .server.pid
+  LOG_FILE: server.log
+
+tasks:
+  default:
+    cmds:
+      - task: help
+    silent: true
+
+  help:
+    desc: Display help information
+    cmds:
+      - echo "Homepage Development Server"
+      - echo "==========================="
+      - echo "Usage:"
+      - echo "  task start    - Start the server (PORT={{.PORT}})"
+      - echo "  task stop     - Stop the server"
+      - echo "  task restart  - Restart the server"
+      - echo "  task status   - Check server status"
+      - echo "  task open     - Open in browser"
+      - echo "  task clean    - Stop and clean up"
+    silent: true
+
+  start:
+    desc: Start the development server
+    cmds:
+      - |
+        if [ -f {{.PID_FILE}} ] && kill -0 $(cat {{.PID_FILE}}) 2>/dev/null; then
+          echo "❌ Server already running on port {{.PORT}}"
+          exit 1
+        fi
+        echo "🚀 Starting development server on port {{.PORT}}..."
+        # Use nohup to ensure the server survives when the task finishes
+        nohup python3 -m http.server {{.PORT}} > {{.LOG_FILE}} 2>&1 & echo $! > {{.PID_FILE}}
+        sleep 1
+        if [ -f {{.PID_FILE}} ] && kill -0 $(cat {{.PID_FILE}}) 2>/dev/null; then
+          echo "✅ Server started successfully!"
+          echo "📍 Open http://localhost:{{.PORT}}"
+          echo "📝 Logs: tail -f {{.LOG_FILE}}"
+        else
+          echo "❌ Failed to start server"
+          rm -f {{.PID_FILE}}
+          exit 1
+        fi
+    silent: true
+
+  stop:
+    desc: Stop the development server
+    cmds:
+      - |
+        if [ ! -f {{.PID_FILE}} ]; then
+          # Fallback: try to find by pattern if PID file is missing
+          pkill -f "python3 -m http.server {{.PORT}}" && echo "✅ Server stopped (pkill)" || echo "ℹ️  No server running"
+        else
+          if kill -0 $(cat {{.PID_FILE}}) 2>/dev/null; then
+            kill $(cat {{.PID_FILE}}) && echo "✅ Server stopped (PID: $(cat {{.PID_FILE}}))"
+          else
+            echo "⚠️  Server not running (stale PID file)"
+          fi
+          rm -f {{.PID_FILE}}
+        fi
+    silent: true
+
+  restart:
+    desc: Restart the server
+    cmds:
+      - task: stop
+      - sleep 1
+      - task: start
+
+  status:
+    desc: Check server status
+    cmds:
+      - |
+        if [ -f {{.PID_FILE}} ] && kill -0 $(cat {{.PID_FILE}}) 2>/dev/null; then
+          echo "✅ Server is running (PID: $(cat {{.PID_FILE}}))"
+          echo "📍 http://localhost:{{.PORT}}"
+        else
+          echo "❌ Server is not running"
+          [ -f {{.PID_FILE}} ] && rm -f {{.PID_FILE}}
+          exit 1
+        fi
+    silent: true
+
+  open:
+    desc: Open the application in the default browser
+    cmds:
+      - |
+        if [ -f {{.PID_FILE}} ] && kill -0 $(cat {{.PID_FILE}}) 2>/dev/null; then
+          open http://localhost:{{.PORT}}
+        else
+          echo "❌ Server is not running. Start it with 'task start'"
+          exit 1
+        fi
+    silent: true
+
+  clean:
+    desc: Stop server and clean up files
+    cmds:
+      - task: stop
+      - rm -f {{.LOG_FILE}}
+      - echo "✅ Clean complete"
+    silent: true
